@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Jua|Tajawal" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <title>Sort Bands</title>
+</head>
+<body onload="fetchWeather(cityName)">
+    <div class="container">
+        <div class="logo">
+            <img id="logoClouds" src="imgs/icons/wi-night-sleet-storm.svg" alt="clouds-icon">
+            <h1>W<span>e</span>ATH<span>E</span>R</h1>
+        </div>
+        <div class="warn">
+            <h1 class="warnMsg">a</h1>
+        </div>
+        <form action="" id="form">
+            <input type="text" name="city" id="city" value="Enter City Name">
+            <i class="icon-search" title="search"></i>
+        </form>
+        <div class="measure">
+                <ul>
+                    <li class="celc">C°</li>
+                    <li class="fahr">F°</li>
+                </ul>
+        </div>
+        <div class="card current">
+            <div class="backgroundCur">
+                <div class="basic">
+                    <h5 id="country"></h5>
+                    <h1 id="town"></h1>
+                    <h3 id="time"></h2>
+                    <img id="pic" src="">
+                    <h2 id="status"></h2>
+                </div>
+                <div class="tempo">
+                    <p id="temp"></p>
+                    <p id="feels"></p>
+                    <p id="hum"></p>
+                    <p id="wind"></p>
+                </div>
+            </div>
+        </div>
+        <div class="" id="foreHead">
+            <h1>For<span>e</span>cast</h1>
+        </div>
+        <div class="forecast">
+            <div class="card" id="1">
+                <div class="background">
+                    <div class="basic">
+                        <h2 class="day"></h2>
+                        <h3 class="time"></h3>
+                        <img class="pic" src="">
+                        <h2 class="status"></h2>
+                    </div>
+                    <div class="tempo">
+                        <p class="temp"></p>
+                        <p class="feels"></p>
+                        <p class="hum"></p>
+                        <p class="wind"></p>
+                        <div class="astro">
+                                <div class="sun">
+                                    <img src="imgs/icons/wi-sunrise.svg" alt="sunrise-icon">
+                                    <div class="sunText">
+                                        <h3>Sunrise</h3>
+                                        <p class="rise"></p>
+                                    </div>
+                                </div>
+                                <div class="sun">
+                                    <img src="imgs/icons/wi-sunset.svg" alt="sunset-icon">
+                                    <div class="sunText">
+                                        <h3>Sunset</h3>
+                                        <p class="set"></p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="2">
+                    <div class="background">
+                        <div class="basic">
+                            <h2 class="day"></h2>
+                            <h3 class="time"></h3>
+                            <img class="pic" src="">
+                            <h2 class="status"></h2>
+                        </div>
+                        <div class="tempo">
+                            <p class="temp"></p>
+                            <p class="feels"></p>
+                            <p class="hum"></p>
+                            <p class="wind"></p>
+                            <div class="astro">
+                                    <div class="sun">
+                                        <img src="imgs/icons/wi-sunrise.svg" alt="sunrise-icon">
+                                        <div class="sunText">
+                                            <h3>Sunrise</h3>
+                                            <p class="rise"></p>
+                                        </div>
+                                    </div>
+                                    <div class="sun">
+                                        <img src="imgs/icons/wi-sunset.svg" alt="sunset-icon">
+                                        <div class="sunText">
+                                            <h3>Sunset</h3>
+                                            <p class="set"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="card" id="3">
+                <div class="background">
+                    <div class="basic">
+                        <h2 class="day"></h2>
+                        <h3 class="time"></h3>
+                        <img class="pic" src="">
+                        <h2 class="status"></h2>
+                    </div>
+                    <div class="tempo">
+                        <p class="temp"></p>
+                        <p class="feels"></p>
+                        <p class="hum"></p>
+                        <p class="wind"></p>
+                        <div class="astro">
+                                <div class="sun">
+                                    <img src="imgs/icons/wi-sunrise.svg" alt="sunrise-icon">
+                                    <div class="sunText">
+                                        <h3>Sunrise</h3>
+                                        <p class="rise"></p>
+                                    </div>
+                                </div>
+                                <div class="sun">
+                                    <img src="imgs/icons/wi-sunset.svg" alt="sunset-icon">
+                                    <div class="sunText">
+                                        <h3>Sunset</h3>
+                                        <p class="set"></p>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id="4">
+                    <div class="background">
+                        <div class="basic">
+                            <h2 class="day"></h2>
+                            <h3 class="time"></h3>
+                            <img class="pic" src="">
+                            <h2 class="status"></h2>
+                        </div>
+                        <div class="tempo">
+                            <p class="temp"></p>
+                            <p class="feels"></p>
+                            <p class="hum"></p>
+                            <p class="wind"></p>
+                            <div class="astro">
+                                    <div class="sun">
+                                        <img src="imgs/icons/wi-sunrise.svg" alt="sunrise-icon">
+                                        <div class="sunText">
+                                            <h3>Sunrise</h3>
+                                            <p class="rise"></p>
+                                        </div>
+                                    </div>
+                                    <div class="sun">
+                                        <img src="imgs/icons/wi-sunset.svg" alt="sunset-icon">
+                                        <div class="sunText">
+                                            <h3>Sunset</h3>
+                                            <p class="set"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="card" id="5">
+                    <div class="background">
+                        <div class="basic">
+                            <h2 class="day"></h2>
+                            <h3 class="time"></h3>
+                            <img class="pic" src="">
+                            <h2 class="status"></h2>
+                        </div>
+                        <div class="tempo">
+                            <p class="temp"></p>
+                            <p class="feels"></p>
+                            <p class="hum"></p>
+                            <p class="wind"></p>
+                            <div class="astro">
+                                    <div class="sun">
+                                        <img src="imgs/icons/wi-sunrise.svg" alt="sunrise-icon">
+                                        <div class="sunText">
+                                            <h3>Sunrise</h3>
+                                            <p class="rise"></p>
+                                        </div>
+                                    </div>
+                                    <div class="sun">
+                                        <img src="imgs/icons/wi-sunset.svg" alt="sunset-icon">
+                                        <div class="sunText">
+                                            <h3>Sunset</h3>
+                                            <p class="set"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <footer>
+                <div class="social">
+                    <h4>Created by Galse</h4>
+                    <a href="https://github.com/Gase9/weather"><i class="icon-github-sign"></i></a>
+                </div>
+                <div class="credits">
+                    <div class="r">
+                        <p>Powered by <a href="https://www.apixu.com/" title="Weather API">Apixu.com</a></p> |
+                        <p><a href="https://fonts.google.com/">Google Fonts</a></p> |
+                        <p><a href="https://unsplash.com/">Unsplash.com</a></p>
+                    </div>
+                    <div class="r">
+                        <p><a href="https://pixabay.com">Pixabay.com</a></p> |
+                        <p><a href="https://fontawesome.com/v3.2.1/">Font Awesome</a></p> |
+                        <p><a href="erikflowers.github.io/weather-icons/">erikflowers - weather icons</a></p>
+                    </div>
+                </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
