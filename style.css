@@ -1,0 +1,485 @@
+:root {
+    --bg: #0DECFD;
+    --card-bg: #00F9CC;
+    --purple: #0C277A;
+    --light-blue: #04C7F6;
+    --darker-blue: #019DF1;
+    --black: #242222;
+    --font-head: 'Jua', sans-serif;;
+    --font-text: 'Tajawal', sans-serif;
+}
+
+/* DEFAULT */
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+html,body {
+    margin: 0;
+    padding: 0;
+    background: #DCF9FF;
+    font-family: var(--font-text);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input {
+    border-radius: 0%;
+}
+
+div {
+    outline-style: none;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* MEASURE BUTTONS */
+.measure {
+    margin: 1em 0 0 0;
+    padding: 0;
+    width: 90vw;
+    z-index: 3;
+}
+
+.measure ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.measure ul li {
+    padding: 0.4em 0.3em 0 0.3em;
+    margin-right: 0.2em;
+    background: var(--card-bg);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.measure ul li:hover {
+    background: var(--bg);
+    color: var(--purple);
+    border: 1px solid rgba(0,0,0,0.5);
+}
+
+/* LOGO */
+.logo {
+    width: 100%;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #DCF9FF;
+    z-index: 2;
+} 
+
+.logo #logoClouds {
+    width: 3em;
+    height: 3em;
+    margin: 0 6.5em 0 0;
+    -webkit-filter: drop-shadow(0px 20px 1px #222);
+    filter: drop-shadow(0px 0px 1px var(--black));
+}
+
+.logo h1 {
+    margin: -0.5em 0 0 0;
+    font-size: 4em;
+    font-family: var(--font-head);
+    border-bottom: 0.5px dashed rgba(12, 39, 122, 0.385);
+    padding-bottom: 0;
+    color: var(--purple);
+}
+
+.logo h1 span {
+    color: var(--darker-blue);
+}
+
+/* SEARCH FORM */
+form {
+    border: 0.5px solid rgba(0,0,0,0.2);
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 8px;
+    padding: 0.2em;
+    width: 22em;
+    margin-top: 0.5em;
+}
+
+form input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1.1em;
+    color: rgba(0,0,0,0.4);
+    margin-left: 0.3em;
+}
+
+form i {
+    color: rgba(0,0,0,0.4);
+    margin-right: 0.3em;
+    cursor: pointer;
+}
+
+/* OPTIONS */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0.9em 0 0 0;
+}
+
+.options li {
+    margin: 0 0.5em;
+    color: var(--purple);
+    cursor: pointer;
+}
+
+.options li:hover {
+    color: var(--darker-blue);
+}
+
+/* CURRENT CARD */
+.current {
+    /* background: url(imgs/thunderstorm.jpg); */
+    font-size: 1.2em;
+    margin-top: 1em !important;
+    margin-bottom: 1.3em !important;
+    /* width: 25em !important; */
+}
+
+.backgroundCur {
+    display: flex;
+    flex-direction: column;
+}
+
+/* FORECAST SECTION*/
+.forecast {
+    margin: 0 1.8em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background: rgba(188, 211, 216, 0.2);
+    padding: 0.9em;
+    border-radius: 15px;
+}
+
+#foreHead h1 {
+    margin: 0 0 0.3em 0;
+    font-family: var(--font-head);
+    color: var(--purple);
+    font-size: 2.5em;
+    border-bottom: 0.5px dashed rgba(0,0,0,0.2);
+    border-top: 0.5px dashed rgba(0,0,0,0.2);
+}
+
+#foreHead span {
+    color: var(--darker-blue);
+}
+
+/* CARD DEFAULT*/
+.card {
+    margin: 0.6em 0.6em;
+    padding: 0 !important;
+    border: 1px solid rgba(0,0,0,0.8);
+    border-radius: 10px;
+    width: 15em;
+    height: 100%;
+    box-shadow: 2px 0px 10px rgba(0,0,0,0.2);
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: screen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card .basic > * {
+    margin: 0;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+.card .basic {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-top: 0.3em;
+}
+
+.forecast .card .basic {
+    height: 13em;
+}
+
+.card h5 {
+    color: rgba(0,0,0,0.4);
+}
+
+.card h1 {
+    /* text-transform: uppercase; */
+    height: 0.9em;
+    height: 100%;
+}
+
+.card h3 {
+    margin-top: -0.3em;
+}
+
+.card img {
+    margin-top: -0.4em;
+    -webkit-filter: drop-shadow(0px 2px 10px #222);
+    filter: drop-shadow(0px 2px 10px var(--black));
+}
+
+.card h2 {
+    color: var(--purple);
+}
+
+.card .status {
+    margin-top: 1em;
+    font-size: 1.2em;
+}
+
+
+.card .tempo {
+    border-top: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0.6em;
+    background: rgba(255, 255, 255, 0.3);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card .tempo p {
+    margin: 0;
+    color: var(--purple);
+}
+
+.card .tempo span {
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.card .background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .astro {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 0.4em;
+    border-top: 1px dashed rgba(0,0,0,0.2);
+}
+
+.sun {
+    margin: 0.1em 0.2em;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.sun img {
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.sun .sunText {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.sunText h3 {
+    margin: 0;
+    font-size: 1em;
+}
+
+/* WARNING MESSAGE */
+.warn {
+    color: rgb(255, 27, 27);
+    font-size: 0.5em;
+    padding: 0.1em;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 200;
+    font-family: var(--font-head);
+    transform: translateY(-5em);
+    transition: all 0.7s;
+    height: 1px;
+    text-align: center;
+    width: 90vw;
+    margin-bottom: 1em;
+}
+
+
+.warnMsg {
+    padding: 0.3em 0.4em 0 0.4em;
+    margin: 0;
+    z-index: 1;
+}
+
+.reveal {
+    height: auto;
+    transform: translateY(0.5em);
+    transition: transform 2s;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 10em;
+    background: var(--bg);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-text);
+    font-size: 0.8em;
+    color: var(--purple);
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 0;
+    padding: 0;
+}
+
+.social h4 {
+    margin-right: 0.4em;
+}
+
+.social i {
+    font-size: 1.3em;
+    color: var(--black);
+    cursor: pointer;
+}
+
+.social i:hover {
+    color: var(--darker-blue);
+}
+
+.credits {
+    margin-top: -1.5em;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.r {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.r > * {
+    margin: 0.5em;
+}
+
+.r > *:hover {
+    color: var(--darker-blue);
+}
+
+
+
+/* media queries */
+
+/* 
+  ##Device = Tablets, Ipads (portrait), Laptops, Desktops
+  ##Screen = B/w 768px to 1280px
+*/
+@media (min-width: 768px) and (max-width: 1280px) {
+
+    .logo #logoClouds {
+        margin: 0 6.9em 0 0;
+    }
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+
+    body { 
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo #logoClouds {
+        margin: 0 6.9em 0 0;
+    }
+  
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+    body { 
+        width: 100vw;
+        height: 100%;
+    }
+
+    .logo #logoClouds {
+        margin: 0 7.3em 0 0;
+    }
+
+    .warn {
+        transition: all 0.3s;
+        width: 100%;
+    }
+    
+    .reveal {
+        transition: transform 1s;
+    }
+
+    .card .tempo {
+        background: rgba(255, 255, 255, 0.6);
+    }
+  
+}
